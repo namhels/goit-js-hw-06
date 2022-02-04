@@ -35,13 +35,14 @@ function createBoxes(amount) {
   amount = refs.input.value;
   const arrayBoxes = [];
 
-  let sizeBox = 30;
+  let widthBox = 20;
+  let heightBox = 20;
 
   for (let i = 0; i < amount; i += 1) {
-    const div = `<div style='background-color: ${getRandomHexColor()}; width: ${(sizeBox += 10)}px; height: ${(sizeBox += 10)}px;'></div>`;
-  arrayBoxes.push(div)
-}
-refs.boxes.insertAdjacentHTML('afterbegin', arrayBoxes.join(''));
+    const div = `<div style='background-color: ${getRandomHexColor()}; width: ${(widthBox += 10)}px; height: ${(heightBox += 10)}px;'></div>`;
+    arrayBoxes.push(div);
+  }
+  refs.boxes.insertAdjacentHTML('afterbegin', arrayBoxes.join(''));
 };
 
 function destroyBoxes() {
