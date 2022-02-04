@@ -23,8 +23,9 @@ function getRandomHexColor() {
 };
 
 const onBtnClick = () => {
-  document.body.style.backgroundColor = getRandomHexColor();
-  refs.changeColor.textContent = getRandomHexColor();
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+  refs.changeColor.textContent = color;
 };
 
 refs.changeBtn.addEventListener("click", onBtnClick);
